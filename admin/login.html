@@ -102,8 +102,11 @@
               //(3)用户点击确认之后跳转首页 (用户点击确认，模态框消失之后触发)
               $('#myModal').on('hidden.bs.modal', function (e) {
                 // do something...
+                //将服务器返回的token存入localstorage
+                localStorage.setItem('token',backData.token);
                 //跳转首页
                 window.location.href = './index.html';
+                
               });
 
             } else {
